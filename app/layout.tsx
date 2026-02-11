@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { Agentation } from "agentation";
-import { DialRoot } from "dialkit";
-import "dialkit/styles.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Générations Unies pour Maisonsgoutte !",
   description:
     "Ensemble, faisons de Maisonsgoutte un village où il fait bon vivre, à tout âge. Élections municipales 2026.",
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon/favicon.ico", sizes: "32x32" },
+    ],
+    apple: "/favicon/apple-touch-icon.png",
+  },
+  manifest: "/favicon/site.webmanifest",
   openGraph: {
     title: "Générations Unies pour Maisonsgoutte !",
     description:
@@ -38,7 +45,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <DialRoot />
         {process.env.NODE_ENV === "development" && <Agentation />}
       </body>
     </html>

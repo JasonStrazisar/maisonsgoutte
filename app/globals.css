@@ -34,7 +34,7 @@ body{font-family:'Inter',sans-serif;background:#FAFAF8}
 
 /* Sections */
 .b-section{padding:80px 40px;max-width:1100px;margin:0 auto}
-.b-section-full{padding:0px 40px}
+.b-section-full{padding:0}
 .b-divider{width:60px;height:3px;background:#2FA36B;margin:0 auto 16px}
 .b-stitle{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;color:#1A1A2E;font-size:clamp(28px,3vw,40px);margin-bottom:8px}
 .b-stitle-center{text-align:center}
@@ -144,22 +144,39 @@ body{font-family:'Inter',sans-serif;background:#FAFAF8}
 .b-footer .left .dates{font-size:14px;opacity:.6}
 .b-footer .right{font-size:12px;opacity:.5;max-width:400px;text-align:right;line-height:1.5}
 
-/* Responsive */
+/* Responsive — Tablet */
+@media(max-width:1024px){
+  .b-section{padding:80px 32px}
+  .b-section-valeurs{padding:80px 32px}
+  .b-vision-section{padding:48px 32px 0}
+  .b-vision-wrap{grid-template-columns:1fr}
+  .b-vision-photo{display:none}
+  .b-infos{grid-template-columns:1fr}
+}
+
+/* Responsive — Mobile */
 @media(max-width:768px){
   .floating-header .nav-links{display:none}
   .b-hero{padding:100px 24px 60px}
+  .b-hero .subtitle{font-size:17px}
+  .b-hero .cta{padding:14px 24px;font-size:15px}
   .b-hero-scroll{bottom:20px}
-  .b-vision-section{padding:64px 24px;overflow:visible}
+  .b-hero-highlights .b-highlight{padding:20px 20px}
+  .b-section{padding:60px 20px}
+  .b-section-full{padding:0}
+  .b-section-valeurs{padding:60px 20px}
+  .b-vision-section{padding:60px 20px;overflow:visible}
   .b-vision-wrap{grid-template-columns:1fr}
   .b-vision-photo{display:none}
+  .b-vision-quote{font-size:17px}
   .b-vision-signature-img{position:static;transform:none;margin-bottom:8px;margin-top:-16px;width:180px;display:block;margin-left:auto}
-  .b-valeurs{grid-template-columns:1fr}
-  .b-engagements{grid-template-columns:1fr}
-  .b-bilan-featured{grid-template-columns:1fr}
-  .b-bilan-grid{grid-template-columns:1fr}
-  .b-infos{grid-template-columns:1fr}
-  .b-leader{grid-template-columns:1fr}
-  .b-footer{flex-direction:column;align-items:flex-start}
+  .b-valeurs{grid-template-columns:1fr;gap:32px}
+  .b-engagements{grid-template-columns:1fr;gap:20px}
+  .b-bilan-featured{grid-template-columns:1fr;gap:20px}
+  .b-bilan-grid{grid-template-columns:1fr;gap:20px}
+  .b-infos{grid-template-columns:1fr;gap:20px}
+  .b-leader{grid-template-columns:1fr;padding:24px}
+  .b-footer{flex-direction:column;align-items:flex-start;padding:36px 20px}
   .b-footer .right{text-align:left}
   .b-vision-signature-img{right:16px;bottom:16px;transform:none!important}
   .b-vision-sig{padding-bottom: 0;}
