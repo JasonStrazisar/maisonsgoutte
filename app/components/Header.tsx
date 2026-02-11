@@ -7,8 +7,8 @@ import { motion } from "motion/react";
 const links = [
   { href: "#vision", label: "Vision" },
   { href: "#bilan", label: "Bilan" },
-  { href: "#equipe", label: "Équipe" },
   { href: "#engagements", label: "Engagements" },
+  { href: "#equipe", label: "Équipe" },
   { href: "#infos", label: "Infos" },
 ];
 

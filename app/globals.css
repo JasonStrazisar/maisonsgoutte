@@ -120,7 +120,7 @@ body{font-family:'Inter',sans-serif;background:#FAFAF8}
 
 /* Footer */
 .b-footer{background:#1A1A2E;color:#fff;padding:48px 40px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
-.b-footer .left .logo{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;font-size:18px;margin-bottom:8px}
+.b-footer .left .logo{height:20px;width:auto;margin-bottom:8px}
 
 /* Playground */
 .pg-shell{max-width:960px;margin:0 auto;padding:64px 40px}

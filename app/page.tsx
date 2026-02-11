@@ -173,45 +173,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Équipe */}
-      <div id="equipe" className="b-section">
-        <div className="b-divider"></div>
-        <h2 className="b-stitle">Notre Équipe</h2>
-        <p className="b-sdesc">Des voisins engagés pour le village.</p>
-        <div className="b-leader">
-          <img className="photo" src="/team/christian.jpg" alt="Christian Haessler" />
-          <div className="info">
-            <h3>Christian Haessler</h3>
-            <div className="role">Tête de liste · Maire sortant</div>
-            <p>
-              À Maisonsgoutte depuis toujours, maire depuis six ans. Christian
-              connaît chaque rue, chaque voisin, et ne compte pas s&#39;arrêter là.
-            </p>
-          </div>
-        </div>
-        <div className="b-team-grid">
-          {[
-            { name: "Marie Dupont", meta: "Enseignante · 42 ans" },
-            { name: "Pierre Martin", meta: "Retraité · 67 ans" },
-            { name: "Sophie Weber", meta: "Infirmière · 35 ans" },
-            { name: "Jean-Luc Schmitt", meta: "Artisan · 55 ans" },
-            { name: "Isabelle Klein", meta: "Comptable · 48 ans" },
-            { name: "Thomas Muller", meta: "Développeur · 29 ans" },
-            { name: "Françoise Roth", meta: "Bénévole · 63 ans" },
-            { name: "Marc Zimmermann", meta: "Agriculteur · 51 ans" },
-            { name: "Claire Fischer", meta: "Architecte · 38 ans" },
-            { name: "André Keller", meta: "Retraité · 71 ans" },
-            { name: "Lucie Braun", meta: "Étudiante · 26 ans" },
-          ].map((m) => (
-            <div key={m.name} className="b-member">
-              <div className="photo">Photo</div>
-              <h4>{m.name}</h4>
-              <p className="meta">{m.meta}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Engagements */}
       <div id="engagements" className="b-section-full" style={{ background: "#F4FAF7" }}>
         <div className="b-section">
@@ -250,6 +211,41 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Équipe */}
+      <div id="equipe" className="b-section">
+        <div className="b-divider"></div>
+        <h2 className="b-stitle">Notre Équipe</h2>
+        <p className="b-sdesc">Des voisins engagés pour le village.</p>
+        <div className="b-leader">
+          <img className="photo" src="/team/christian.jpg" alt="Christian Haessler" />
+          <div className="info">
+            <h3>Christian Haessler</h3>
+            <div className="role">Tête de liste · Maire sortant</div>
+          </div>
+        </div>
+        <div className="b-team-grid">
+          {[
+            { name: "Marie Dupont", meta: "Enseignante · 42 ans" },
+            { name: "Pierre Martin", meta: "Retraité · 67 ans" },
+            { name: "Sophie Weber", meta: "Infirmière · 35 ans" },
+            { name: "Jean-Luc Schmitt", meta: "Artisan · 55 ans" },
+            { name: "Isabelle Klein", meta: "Comptable · 48 ans" },
+            { name: "Thomas Muller", meta: "Développeur · 29 ans" },
+            { name: "Françoise Roth", meta: "Bénévole · 63 ans" },
+            { name: "Marc Zimmermann", meta: "Agriculteur · 51 ans" },
+            { name: "Claire Fischer", meta: "Architecte · 38 ans" },
+            { name: "André Keller", meta: "Retraité · 71 ans" },
+            { name: "Lucie Braun", meta: "Étudiante · 26 ans" },
+          ].map((m) => (
+            <div key={m.name} className="b-member">
+              <div className="photo">Photo</div>
+              <h4>{m.name}</h4>
+              <p className="meta">{m.meta}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Infos Pratiques */}
       <div id="infos" className="b-section-full" style={{ background: "#fff" }}>
         <div className="b-section">
@@ -269,8 +265,8 @@ export default function Home() {
               <div className="icon"><MapPin /></div>
               <h3>Bureau de vote</h3>
               <p>
-                Salle polyvalente<br />
-                1 rue de la Mairie<br />
+                Mairie<br />
+                47 Grand-rue<br />
                 67220 Maisonsgoutte
               </p>
               <p style={{ marginTop: 8, fontWeight: 600 }}>8h — 18h</p>
@@ -279,9 +275,10 @@ export default function Home() {
               <div className="icon"><Info /></div>
               <h3>Comment voter ?</h3>
               <p>
-                Scrutin plurinominal majoritaire à deux tours (communes &lt; 1000
-                hab.). Vous pouvez rayer des noms ou ajouter ceux d&#39;autres
-                candidats.
+                Nouveau en 2026 : le scrutin de liste s&#39;applique désormais
+                aux communes de moins de 1 000 habitants. Vous votez pour une
+                liste complète, sans rayer ni ajouter de noms. Tout bulletin
+                modifié sera considéré comme nul.
               </p>
             </div>
           </div>
@@ -291,7 +288,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="b-footer">
         <div className="left">
-          <div className="logo">Générations Unies pour Maisonsgoutte !</div>
+          <img src="/logo_white.svg" alt="Générations Unies pour Maisonsgoutte !" className="logo" />
           <div className="dates">
             Élections municipales — 15 et 22 mars 2026
           </div>
