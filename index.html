@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Générations Unies pour Maisonsgoutte !</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#FAFAF8}
+
+/* Nav */
+.b-nav{position:sticky;top:0;z-index:999;background:#fff;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e0e0e0}
+.b-nav .logo{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;color:#1A1A2E;font-size:16px;letter-spacing:-.5px}
+.b-nav .nav-links{display:flex;gap:32px;list-style:none}
+.b-nav .nav-links a{text-decoration:none;color:#888;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;transition:color .2s}
+.b-nav .nav-links a:hover{color:#1A1A2E}
+
+/* Hero */
+.b-hero{padding:100px 40px 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.b-hero .overline{text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:600;color:#2FA36B;margin-bottom:20px}
+.b-hero h1{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;color:#1A1A2E;font-size:clamp(36px,4.5vw,52px);line-height:1.1;margin-bottom:24px}
+.b-hero .subtitle{font-size:19px;color:#666;line-height:1.6;margin-bottom:32px}
+.b-hero .cta{display:inline-flex;align-items:center;gap:8px;color:#2FA36B;font-weight:600;font-size:16px;text-decoration:none;border-bottom:2px solid #2FA36B;padding-bottom:4px;transition:gap .2s}
+.b-hero .cta:hover{gap:14px}
+.b-hero .photo-side{aspect-ratio:4/5;background:#e8e8e8;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:14px}
+
+/* Sections */
+.b-section{padding:80px 40px;max-width:1100px;margin:0 auto}
+.b-section-full{padding:80px 40px}
+.b-divider{width:60px;height:3px;background:#2FA36B;margin:0 auto 16px}
+.b-stitle{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;color:#1A1A2E;font-size:clamp(28px,3vw,40px);margin-bottom:8px}
+.b-stitle-center{text-align:center}
+.b-sdesc{color:#888;font-size:16px;max-width:520px;line-height:1.6;margin-bottom:48px}
+.b-sdesc-center{text-align:center;margin-left:auto;margin-right:auto}
+
+/* Vision */
+.b-vision{display:grid;grid-template-columns:280px 1fr;gap:60px;align-items:start}
+.b-vision .portrait{width:100%;aspect-ratio:3/4;background:#e8e8e8;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:13px}
+.b-vision .text{font-size:17px;line-height:1.8;color:#444}
+.b-vision .text .dropcap{float:left;font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;font-size:64px;line-height:.8;padding-right:12px;color:#2FA36B}
+.b-vision .sig{margin-top:24px;font-weight:600;color:#1A1A2E;font-size:15px}
+
+/* Valeurs */
+.b-valeurs{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.b-vcard{border-top:3px solid #2FA36B;padding-top:24px}
+.b-vcard .num{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;font-size:48px;color:#E8F5EE;margin-bottom:8px}
+.b-vcard h3{font-size:18px;font-weight:600;color:#1A1A2E;margin-bottom:8px}
+.b-vcard p{font-size:15px;color:#888;line-height:1.6}
+
+/* Equipe */
+.b-leader{display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:center;padding:40px;background:#fff;border:1px solid #e8e8e8;margin-bottom:48px}
+.b-leader .photo{width:100%;aspect-ratio:1;background:#e8e8e8;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:12px}
+.b-leader .info h3{font-size:24px;color:#1A1A2E;margin-bottom:4px}
+.b-leader .info .role{text-transform:uppercase;letter-spacing:2px;font-size:12px;color:#2FA36B;font-weight:600;margin-bottom:12px}
+.b-leader .info p{font-size:15px;color:#666;line-height:1.6}
+.b-team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:32px}
+.b-member{text-align:left}
+.b-member .photo{width:100%;aspect-ratio:1;background:#f0f0f0;border-radius:4px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:11px}
+.b-member h4{font-size:15px;color:#1A1A2E;margin-bottom:2px}
+.b-member .meta{font-size:12px;color:#aaa;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.b-member .motiv{font-size:14px;color:#888;line-height:1.4}
+
+/* Engagements */
+.b-engagements{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.b-eng-card{border:1px solid #e8e8e8;padding:32px;background:#fff;transition:border-color .2s}
+.b-eng-card:hover{border-color:#2FA36B}
+.b-eng-card h3{font-size:18px;color:#1A1A2E;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.b-eng-card h3 .emoji{font-size:22px}
+.b-eng-card .tagline{font-size:13px;color:#2FA36B;font-weight:500;margin-bottom:12px}
+.b-eng-card ul{list-style:none;padding:0}
+.b-eng-card li{font-size:14px;color:#666;padding:6px 0;border-bottom:1px solid #f4f4f4;line-height:1.4}
+.b-eng-card li:last-child{border:none}
+
+/* Bilan */
+.b-bilan-top{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:60px;padding:48px 0;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8}
+.b-stat{text-align:center}
+.b-stat .num{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;font-size:42px;color:#2FA36B}
+.b-stat .label{font-size:14px;color:#888;margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+.b-timeline{position:relative;padding-left:40px}
+.b-timeline::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:2px;background:#E8F5EE}
+.b-tl-item{position:relative;margin-bottom:32px}
+.b-tl-item::before{content:'';position:absolute;left:-34px;top:4px;width:12px;height:12px;border-radius:50%;background:#2FA36B}
+.b-tl-item .year{font-size:13px;color:#2FA36B;font-weight:600;margin-bottom:4px}
+.b-tl-item h4{font-size:16px;color:#1A1A2E;margin-bottom:4px}
+.b-tl-item p{font-size:14px;color:#888;line-height:1.5}
+
+/* Infos */
+.b-infos{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.b-info-card{padding:32px;border:1px solid #e8e8e8;background:#fff}
+.b-info-card .icon{font-size:28px;margin-bottom:16px}
+.b-info-card h3{font-size:16px;color:#1A1A2E;margin-bottom:8px}
+.b-info-card p{font-size:15px;color:#666;line-height:1.5}
+.b-info-card .date{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;color:#2FA36B;font-size:20px;margin:8px 0}
+
+/* Footer */
+.b-footer{background:#1A1A2E;color:#fff;padding:48px 40px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px}
+.b-footer .left .logo{font-family:'Rubik',sans-serif;font-style:italic;font-weight:800;font-size:18px;margin-bottom:8px}
+.b-footer .left .dates{font-size:14px;opacity:.6}
+.b-footer .right{font-size:12px;opacity:.5;max-width:400px;text-align:right;line-height:1.5}
+
+/* Responsive */
+@media(max-width:768px){
+  .b-nav .nav-links{display:none}
+  .b-hero{grid-template-columns:1fr;padding:60px 24px}
+  .b-vision{grid-template-columns:1fr}
+  .b-valeurs{grid-template-columns:1fr}
+  .b-engagements{grid-template-columns:1fr}
+  .b-bilan-top{grid-template-columns:1fr;gap:20px}
+  .b-infos{grid-template-columns:1fr}
+  .b-leader{grid-template-columns:1fr}
+  .b-footer{flex-direction:column;align-items:flex-start}
+  .b-footer .right{text-align:left}
+}
+</style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="b-nav">
+    <div class="logo">Générations Unies</div>
+    <ul class="nav-links">
+      <li><a href="#">Vision</a></li>
+      <li><a href="#">Équipe</a></li>
+      <li><a href="#">Engagements</a></li>
+      <li><a href="#">Bilan</a></li>
+      <li><a href="#">Infos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="b-hero">
+    <div class="text-side">
+      <div class="overline">Élections municipales 2026</div>
+      <h1>Générations Unies pour Maisonsgoutte&nbsp;!</h1>
+      <p class="subtitle">Ensemble, faisons de Maisonsgoutte un village où il fait bon vivre, à tout âge.</p>
+      <a href="#" class="cta">Découvrir notre projet →</a>
+    </div>
+    <div class="photo-side">📷 Photo d'équipe</div>
+  </section>
+
+  <!-- Vision -->
+  <div class="b-section">
+    <div class="b-divider"></div>
+    <h2 class="b-stitle">Notre Vision</h2>
+    <p class="b-sdesc">Un mot de Christian Haessler, maire sortant.</p>
+    <div class="b-vision">
+      <div class="portrait">Portrait</div>
+      <div class="text">
+        <span class="dropcap">C</span>
+        <p>hers voisins, chers amis de Maisonsgoutte. Depuis six ans, nous travaillons ensemble à faire de notre village un lieu de vie agréable pour toutes les générations. Aujourd'hui, nous souhaitons poursuivre cette dynamique avec une équipe renouvelée, riche de ses diversités et unie par un même attachement à Maisonsgoutte.</p>
+        <br>
+        <p>Notre projet est simple : continuer à être à l'écoute de chacun d'entre vous, investir dans l'avenir de notre commune tout en préservant ce qui fait son charme — la convivialité, la solidarité et la beauté de notre cadre de vie vosgien.</p>
+        <p class="sig">Christian Haessler — Maire de Maisonsgoutte</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Valeurs -->
+  <div class="b-section">
+    <div class="b-divider"></div>
+    <h2 class="b-stitle b-stitle-center">Nos Valeurs</h2>
+    <p class="b-sdesc b-sdesc-center">Trois piliers pour notre action.</p>
+    <div class="b-valeurs">
+      <div class="b-vcard">
+        <div class="num">01</div>
+        <h3>Proximité et Écoute</h3>
+        <p>Une gouvernance accessible où chaque habitant peut se faire entendre. Permanences régulières et transparence.</p>
+      </div>
+      <div class="b-vcard">
+        <div class="num">02</div>
+        <h3>Solidarité entre Générations</h3>
+        <p>Chaque génération trouve sa place. Des jeunes aux aînés, nous créons des passerelles pour vivre ensemble.</p>
+      </div>
+      <div class="b-vcard">
+        <div class="num">03</div>
+        <h3>Cadre de Vie et Transition</h3>
+        <p>Préserver la beauté de notre vallée tout en préparant l'avenir. Transition écologique progressive.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Équipe -->
+  <div class="b-section">
+    <div class="b-divider"></div>
+    <h2 class="b-stitle">Notre Équipe</h2>
+    <p class="b-sdesc">Une équipe à votre service.</p>
+    <div class="b-leader">
+      <div class="photo">Photo</div>
+      <div class="info">
+        <h3>Christian Haessler</h3>
+        <div class="role">Tête de liste · Maire sortant</div>
+        <p>Engagé pour Maisonsgoutte depuis plus de 20 ans, Christian porte une vision de proximité et de développement durable pour notre commune.</p>
+      </div>
+    </div>
+    <div class="b-team-grid">
+      <div class="b-member"><div class="photo">Photo</div><h4>Marie Dupont</h4><p class="meta">Enseignante · 42 ans</p><p class="motiv">Pour l'avenir de nos enfants.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Pierre Martin</h4><p class="meta">Retraité · 67 ans</p><p class="motiv">Transmettre notre patrimoine.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Sophie Weber</h4><p class="meta">Infirmière · 35 ans</p><p class="motiv">La santé pour tous.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Jean-Luc Schmitt</h4><p class="meta">Artisan · 55 ans</p><p class="motiv">Soutenir l'économie locale.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Isabelle Klein</h4><p class="meta">Comptable · 48 ans</p><p class="motiv">Une gestion rigoureuse.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Thomas Muller</h4><p class="meta">Développeur · 29 ans</p><p class="motiv">Le numérique au village.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Françoise Roth</h4><p class="meta">Bénévole · 63 ans</p><p class="motiv">L'entraide, toujours.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Marc Zimmermann</h4><p class="meta">Agriculteur · 51 ans</p><p class="motiv">Nourrir notre territoire.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Claire Fischer</h4><p class="meta">Architecte · 38 ans</p><p class="motiv">Bâtir avec sens.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>André Keller</h4><p class="meta">Retraité · 71 ans</p><p class="motiv">La mémoire du village.</p></div>
+      <div class="b-member"><div class="photo">Photo</div><h4>Lucie Braun</h4><p class="meta">Étudiante · 26 ans</p><p class="motiv">Faire entendre la jeunesse.</p></div>
+    </div>
+  </div>
+
+  <!-- Engagements -->
+  <div class="b-section-full" style="background:#F4FAF7">
+    <div class="b-section">
+      <div class="b-divider"></div>
+      <h2 class="b-stitle b-stitle-center">Nos Engagements</h2>
+      <p class="b-sdesc b-sdesc-center">Un programme concret, construit avec vous.</p>
+      <div class="b-engagements">
+        <div class="b-eng-card">
+          <h3><span class="emoji">🏡</span> Vie quotidienne</h3>
+          <div class="tagline">Services et proximité</div>
+          <ul><li>Maintenir les services de proximité</li><li>Renforcer l'accès aux soins</li><li>Améliorer la connectivité numérique</li><li>Optimiser la gestion des déchets</li></ul>
+        </div>
+        <div class="b-eng-card">
+          <h3><span class="emoji">🎒</span> Jeunesse et éducation</h3>
+          <div class="tagline">L'avenir en premier</div>
+          <ul><li>Soutenir l'école communale</li><li>Créer un espace jeunes</li><li>Développer les stages locaux</li></ul>
+        </div>
+        <div class="b-eng-card">
+          <h3><span class="emoji">🤗</span> Nos aînés</h3>
+          <div class="tagline">Respect et attention</div>
+          <ul><li>Services d'aide à domicile</li><li>Visites aux personnes isolées</li><li>Espaces adaptés à la mobilité réduite</li></ul>
+        </div>
+        <div class="b-eng-card">
+          <h3><span class="emoji">🌿</span> Environnement</h3>
+          <div class="tagline">Préserver et innover</div>
+          <ul><li>Planter 200 arbres en 6 ans</li><li>Restaurer les sentiers</li><li>Énergies renouvelables</li><li>Protéger la biodiversité</li></ul>
+        </div>
+        <div class="b-eng-card">
+          <h3><span class="emoji">🎭</span> Vie associative</h3>
+          <div class="tagline">Ensemble, on est plus forts</div>
+          <ul><li>Augmenter le soutien aux associations</li><li>Festival annuel intergénérationnel</li><li>Espace culturel partagé</li></ul>
+        </div>
+        <div class="b-eng-card">
+          <h3><span class="emoji">🏗️</span> Aménagement</h3>
+          <div class="tagline">Construire demain</div>
+          <ul><li>Rénover le centre-bourg</li><li>Logements pour jeunes ménages</li><li>Pistes cyclables intercommunales</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bilan -->
+  <div class="b-section">
+    <div class="b-divider"></div>
+    <h2 class="b-stitle b-stitle-center">Notre Bilan</h2>
+    <p class="b-sdesc b-sdesc-center">Ce que nous avons accompli ensemble.</p>
+    <div class="b-bilan-top">
+      <div class="b-stat"><div class="num">1,2M€</div><div class="label">Investis</div></div>
+      <div class="b-stat"><div class="num">18</div><div class="label">Projets réalisés</div></div>
+      <div class="b-stat"><div class="num">12</div><div class="label">Associations soutenues</div></div>
+    </div>
+    <div class="b-timeline">
+      <div class="b-tl-item"><div class="year">2021</div><h4>Rénovation de la salle polyvalente</h4><p>Mise aux normes et isolation complète du bâtiment communal.</p></div>
+      <div class="b-tl-item"><div class="year">2021</div><h4>Création de l'aire de jeux</h4><p>Espace ludique et sécurisé au cœur du village.</p></div>
+      <div class="b-tl-item"><div class="year">2022</div><h4>Déploiement fibre optique</h4><p>90% des foyers raccordés au très haut débit.</p></div>
+      <div class="b-tl-item"><div class="year">2023</div><h4>Restauration du lavoir historique</h4><p>Préservation du patrimoine emblématique.</p></div>
+      <div class="b-tl-item"><div class="year">2023</div><h4>Panneaux solaires communaux</h4><p>40% des besoins énergétiques couverts.</p></div>
+      <div class="b-tl-item"><div class="year">2024</div><h4>Parking paysager</h4><p>Stationnement végétalisé avec gestion des eaux.</p></div>
+      <div class="b-tl-item"><div class="year">2024</div><h4>Sentier intergénérationnel</h4><p>Parcours accessible vers les forêts vosgiennes.</p></div>
+      <div class="b-tl-item"><div class="year">2025</div><h4>Maison des associations</h4><p>Lieu dédié à la vie associative et aux rencontres.</p></div>
+    </div>
+  </div>
+
+  <!-- Infos Pratiques -->
+  <div class="b-section-full" style="background:#F4FAF7">
+    <div class="b-section">
+      <div class="b-divider"></div>
+      <h2 class="b-stitle b-stitle-center">Infos Pratiques</h2>
+      <p class="b-sdesc b-sdesc-center">Tout savoir pour voter.</p>
+      <div class="b-infos">
+        <div class="b-info-card">
+          <div class="icon">📅</div>
+          <h3>Dates des scrutins</h3>
+          <div class="date">15 mars 2026</div>
+          <p>Premier tour</p>
+          <div class="date">22 mars 2026</div>
+          <p>Second tour (si nécessaire)</p>
+        </div>
+        <div class="b-info-card">
+          <div class="icon">📍</div>
+          <h3>Bureau de vote</h3>
+          <p>Salle polyvalente<br>1 rue de la Mairie<br>67220 Maisonsgoutte</p>
+          <p style="margin-top:8px;font-weight:600">8h — 18h</p>
+        </div>
+        <div class="b-info-card">
+          <div class="icon">🗳️</div>
+          <h3>Comment voter ?</h3>
+          <p>Scrutin plurinominal majoritaire à deux tours (communes &lt; 1000 hab.). Vous pouvez rayer des noms ou ajouter ceux d'autres candidats.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="b-footer">
+    <div class="left">
+      <div class="logo">Générations Unies pour Maisonsgoutte !</div>
+      <div class="dates">Élections municipales — 15 et 22 mars 2026</div>
+    </div>
+    <div class="right">Site réalisé par la liste « Générations Unies pour Maisonsgoutte ! ». Directeur de la publication : Christian Haessler. Ce site ne collecte aucune donnée personnelle.</div>
+  </footer>
+
+</body>
+</html>
