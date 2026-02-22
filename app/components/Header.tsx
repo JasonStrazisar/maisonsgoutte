@@ -58,7 +58,7 @@ export default function Header() {
         <a href="/" className="logo" style={{ position: "relative", width: 156, height: 23 }}>
           <Image
             src="/logo_white.svg"
-            alt="Générations Unies pour Maisonsgoutte"
+            alt="Générations Unies !"
             width={156}
             height={23}
             style={{ position: "absolute", inset: 0, opacity: scrolled ? 0 : 1, transition: "opacity .4s ease" }}

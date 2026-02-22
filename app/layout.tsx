@@ -3,9 +3,9 @@ import { Agentation } from "agentation";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Générations Unies pour Maisonsgoutte !",
+  title: "Générations Unies !",
   description:
-    "Ensemble, faisons de Maisonsgoutte un village où il fait bon vivre, à tout âge. Élections municipales 2026.",
+    "Ensemble, continuons à faire de Maisonsgoutte un village où il fait bon vivre. Élections municipales 2026.",
   icons: {
     icon: [
       { url: "/favicon/favicon.svg", type: "image/svg+xml" },
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon/site.webmanifest",
   openGraph: {
-    title: "Générations Unies pour Maisonsgoutte !",
+    title: "Générations Unies !",
     description:
-      "Ensemble, faisons de Maisonsgoutte un village où il fait bon vivre, à tout âge.",
+      "Ensemble, continuons à faire de Maisonsgoutte un village où il fait bon vivre.",
     locale: "fr_FR",
     type: "website",
   },
